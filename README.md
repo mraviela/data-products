@@ -1,6 +1,14 @@
-## This repo is about the course **Data Products** for Johns Hopkins University at COURSERA  
-
 ## WELCOME  
 
+This repository/page is about the course **Data Products** for Data Science Speciallization by Johns Hopkins University at COURSERA.    
 
-For the first project page [click here](https://mraviela.github.io/data-products/project1.html) or [here](./project1.md)
+###Next you will find the links for the assigments required in the course:  
+
+1. Week 2 assigment [Map](./project1.md)   
+2. Week 3 assigment [under construction]  
+3. Week 4 assigment [under construction]  
+
+
+Thanks to all the reviewers.  
+
+Miguel
