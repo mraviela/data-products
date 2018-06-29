@@ -1,7 +1,7 @@
 ---
 title: "My first Map"
 author: "Miguel Angel Raviela (mraviela@gmail.com)"
-date: "6-28-2018"
+date: "28/06/2018"
 output: 
   html_document: 
     keep_md: yes
