@@ -15,7 +15,7 @@ library(leaflet)
 ## Week 2 Assigment  
 
 
-This map was created on 28th of June, 2018 as Week-2's assigment for the course **Developing Data Products**, it shows the location of an important Ancient Archaeological site in Mesoamerica.   
+This map was created on 28th of June, 2018 as Week-2's assigment for the course **Developing Data Products**, it shows the location of an Ancient Archaeological site in Mesoamerica.   
 
 
 ```{r my_map, echo = FALSE}
@@ -35,5 +35,6 @@ t <- leaflet() %>%
   )
 
 t
-```
+```  
 
+[back](./README.md)
