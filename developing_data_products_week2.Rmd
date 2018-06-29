@@ -1,0 +1,39 @@
+---
+title: "My first Map"
+author: "Miguel Angel Raviela (mraviela@gmail.com)"
+date: "6/28/2018"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+## Week 2 Assigment  
+
+
+This map was created on 28th of June, 2018 as Week-2's assigment for the course **Developing Data Products**, it shows the location of an important Ancient Archaeological site in Mesoamerica.   
+
+
+```{r my_map, echo = FALSE}
+
+content <- paste(sep = "<br/>",
+                 "<b><a href='https://en.wikipedia.org/wiki/Teotihuacan'>Teotihuacán</a></b>",
+                 "Place where gods were born",
+                 "Sun piramid"
+)
+
+t <- leaflet() %>% 
+  addTiles() %>%
+  addCircles(lng = -98.845084285, lat = 19.692270590, weight = 1,
+             radius = 950) %>%
+  addPopups(lng=-98.843555274, lat=19.692270590, content,
+            options = popupOptions(closeButton = FALSE)
+  )
+
+t
+```
+
