@@ -1,0 +1,69 @@
+---
+title: "Developing Data Products Week 3"
+author: "by Miguel Angel Raviela (mraviela@gmail.com)"
+date: "June 30, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, verbose = FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r data_load, include=FALSE}
+library(plotly)
+library(dplyr)
+
+data(ToothGrowth)
+tg_vc <- ToothGrowth %>% filter(supp == 'VC')
+tg_oj <- ToothGrowth %>% filter(supp == 'OJ')
+```
+
+## Introduction
+
+This is an R Markdown presentation about the course **Developing Data Products** by **Johns Hopkins University** at Coursera, created as assignment for week 3.  
+
+We will show some **Plotly** library features, using **ToothGrowth** dataset to generate plots.
+
+```{r summary, echo = TRUE}
+summary(ToothGrowth)
+```
+
+## Scatter
+
+```{r scatter, echo = FALSE}
+plot_ly(data = ToothGrowth, x = ~dose, y = ~len, color = ~supp)
+```
+
+## Box
+
+```{r box, echo = FALSE}
+plot_ly(data = ToothGrowth, 
+        x = ~dose, 
+        y = ~len, type = "box", color = ~supp) %>% 
+  layout(boxmode = "group")
+```
+
+## Histogram
+
+```{r histogram, echo = FALSE}
+plot_ly() %>% 
+  add_histogram(data = tg_vc, x = ~len) %>% 
+  add_histogram(data = tg_oj, x = ~len) %>% 
+  layout(barmode = "overlay")
+```
+
+## Line
+
+```{r line, echo = FALSE}
+plot_ly(tg_vc, y = ~dose, x = ~len, 
+        name = 'Vitamin C', type = 'scatter', 
+        mode = 'lines+markers') %>% 
+  add_trace(data = tg_oj, y = ~dose, x = ~len, 
+            name = 'Orange Juice', mode = 'lines+markers') 
+```
+
+## Thank you  
+
+
+[back to data-products](https://mraviela.github.io/data-products/)
+
